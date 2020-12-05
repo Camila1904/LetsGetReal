@@ -46,7 +46,8 @@ public class RealNumber extends Number {
    *this divided by the other
    */
    public RealNumber divide(RealNumber other){
-         return null;
+     RealNumber quotient = new RealNumber(value / other.getValue());
+     return quotient;
    }
 
    /*
