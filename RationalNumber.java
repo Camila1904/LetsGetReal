@@ -51,6 +51,7 @@ public class RationalNumber extends Number {
   */
   public boolean equals(RationalNumber other){
     return numerator == other.getNumerator() && denominator == other.getDenominator();
+
   }
 
   /**
@@ -102,7 +103,8 @@ public class RationalNumber extends Number {
   *Return a new RationalNumber that is the product of this and the other
   */
   public RationalNumber multiply(RationalNumber other){
-    return null;
+    RationalNumber result = new RationalNumber(numerator * other.getNumerator(), denominator* other.getDenominator());
+    return result;
   }
 
   /**
