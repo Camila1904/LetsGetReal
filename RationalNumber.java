@@ -43,7 +43,8 @@ public class RationalNumber extends Number {
   *and denominator as this RationalNumber but reversed.
   */
   public RationalNumber reciprocal(){
-    return null;
+    RationalNumber result = new RationalNumber(denominator, numerator);
+    return result;
   }
   /**
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
@@ -84,9 +85,9 @@ public class RationalNumber extends Number {
   //  http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
   }
   private void reduce(){
-    int g = gcd(Math.abs(numerator), denominator);
-    numerator = numerator / g;
-    denominator = denominator / g;
+    int x = gcd(Math.abs(numerator), denominator);
+    numerator = numerator / x;
+    denominator = denominator / x;
   /**
   *Divide the numerator and denominator by the GCD
   *This must be used to maintain that all RationalNumbers are
