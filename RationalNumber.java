@@ -57,7 +57,10 @@ public class RationalNumber extends Number {
   *@return the value expressed as "3/4" or "8/3"
   */
   public String toString(){
-    return "0";
+    if (denominator == 1 || numerator == 0) {
+      return numerator + "";
+    }
+    return numerator + "/" + denominator;
   }
 
   /**Calculate the GCD of two integers.
