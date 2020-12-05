@@ -118,7 +118,10 @@ public class RationalNumber extends Number {
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return null;
+    int commonDenom = denominator * other.getDenominator();
+    int nume = numerator * other.getDenominator() + other.getNumerator() * denominator;
+    RationalNumber sum = new RationalNumber(nume, commonDenom);
+    return sum;
   }
   /**
   *Return a new RationalNumber that this minus the other
