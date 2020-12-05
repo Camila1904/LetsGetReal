@@ -30,7 +30,7 @@ public class RationalNumber extends Number {
   *@return the numerator
   */
   public int getNumerator(){
-    return 0;
+    return numerator;
   }
   /**
   *@return the denominator
