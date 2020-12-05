@@ -127,6 +127,9 @@ public class RationalNumber extends Number {
   *Return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
-    return null;
+    int commonDenom = denominator * other.getDenominator();
+    int nume = numerator * other.getDenominator() - other.getNumerator() * denominator;
+    RationalNumber difference = new RationalNumber(nume, commonDenom);
+    return difference;
   }
 }
